@@ -3,11 +3,24 @@ import './Login.css';
 
 const Login = () => {
     const handleSubmit = (e) => {
-    e.preventDefault();
-    // Logique de validation
-    alert("Connexion réussie ! Bienvenue sur StayHealthy."); 
-    // PRENDS LA CAPTURE QUAND CETTE ALERTE EST À L'ÉCRAN
-};
+        e.preventDefault();
+        
+        // Récupérer la valeur de l'email depuis le formulaire
+        const emailValue = e.target.email.value;
+
+        if (emailValue) {
+            // 1. Stocker l'email pour que la Navbar sache qu'on est connecté
+            sessionStorage.setItem("email", emailValue);
+            
+            // 2. Afficher l'alerte pour ta capture d'écran (Task 6)
+            alert("Connexion réussie ! Bienvenue sur StayHealthy."); 
+            
+            // 3. Rediriger vers l'accueil
+            window.location.href = "/"; 
+        } else {
+            alert("Please enter a valid email");
+        }
+    };
   return (
     <div className="login-container">
       <div className="login-grid">

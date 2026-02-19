@@ -31,11 +31,14 @@ const Navbar = () => {
                 <li className="link"><a href="/appointments">Appointments</a></li>
                 <li className="link"><a href="/blog">Health Blog</a></li>
                 <li className="link"><a href="/reviews">Reviews</a></li>
+                <li className="link">
+                    <Link to="/find-doctor">Find a Doctor</Link>
+                </li>
+                <Link to="/profile">My Profile</Link>
             </ul>
             <div className="navbar-auth">
                 {isLoggedIn ? (
                     <>
-                        <span className="welcome-text">Welcome, User!</span>
                         <button className="btn-logout" onClick={handleLogout}>Logout</button>
                     </>
                 ) : (

@@ -4,6 +4,10 @@ import Navbar from './Navbar';
 import SignUp from './Sign_Up';
 import Login from './Login';
 import './App.css';
+import FindDoctorSearch from './FindDoctorSearch';
+import InstantConsultation from './InstantConsultation';
+import GiveReviews from './GiveReviews';
+import ProfileCard from './ProfileCard';
 
 function App() {
   return (
@@ -22,8 +26,10 @@ function App() {
             
             {/* Route pour la connexion */}
             <Route path="/login" element={<Login />} />
-            
-            {/* Ajoute les futures routes ici (ex: /appointments) */}
+            <Route path="/find-doctor" element={<FindDoctorSearch />} />
+            <Route path="/instant-consultation" element={<InstantConsultation />} />
+            <Route path="/give-reviews" element={<GiveReviews />} />
+            <Route path="/profile" element={<ProfileCard />} />
           </Routes>
         </BrowserRouter>
     </div>
